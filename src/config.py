@@ -53,3 +53,11 @@ def prior_locations(y):
     ticks = set(range(1400, 2201, 20)) | set(range(1800, 2001, 5))
     ticks |= set(range(1300, 1381, 20)) | set(range(2220, 2301, 20))
     return sorted([v / 1000 for v in ticks] + [float(np.mean(y))])
+
+
+def all_configs():
+    """The eight complete comparison configurations in a fixed order."""
+    return [AnalysisConfig(method, sampling, loss)
+            for method in ("reimherr", "wiesenfarth")
+            for sampling in ("bootstrap", "likelihood")
+            for loss in ("posterior_mse", "squared_mean")]

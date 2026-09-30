@@ -1,0 +1,79 @@
+{
+  "status": "passed",
+  "combinations": 8,
+  "rows": 1312,
+  "checks": [
+    {
+      "configuration": "reimherr",
+      "rows": 164,
+      "files": {
+        "tables/reimherr.csv": "f9e194937d84e82f1f7e6e56b56da5501d1e5f4b48fab38997d09b0947d2370e",
+        "metadata/reimherr.json": "b0080e9d2a196054daa69b864ea189f3349ba9c56b7227b916ed42f01c71978c",
+        "figures/reimherr.png": "45c4fbbdc755c5ea63c579ba5bbacb433666c442cb7ab7265d4c08b143316ce6"
+      }
+    },
+    {
+      "configuration": "reimherr__bootstrap__squared_mean",
+      "rows": 164,
+      "files": {
+        "tables/reimherr__bootstrap__squared_mean.csv": "20b279ea7e414939bad6ac513cc991d3d3601aec925ebb43882814cdebd7f731",
+        "metadata/reimherr__bootstrap__squared_mean.json": "a87857933c41b5dd179ebe25db4aabe928593a50626c75a9949300d949184278",
+        "figures/reimherr__bootstrap__squared_mean.png": "d8eac046fd24d478fb1d2112b837db44990652d2e782bd14f93035ef9616c583"
+      }
+    },
+    {
+      "configuration": "reimherr__likelihood__posterior_mse",
+      "rows": 164,
+      "files": {
+        "tables/reimherr__likelihood__posterior_mse.csv": "7c61a164d8e97550a8a76504bc60c4fceb957262617c881299b874a689beaa96",
+        "metadata/reimherr__likelihood__posterior_mse.json": "2b658751fd97db16f2e51163f429c80cad1280f8a9cbe57c323749f8288ff8b9",
+        "figures/reimherr__likelihood__posterior_mse.png": "7b52d95bf83d71b3518ebc4ce9d22c03216fd744ed9b712f988436563b8313d9"
+      }
+    },
+    {
+      "configuration": "reimherr__likelihood__squared_mean",
+      "rows": 164,
+      "files": {
+        "tables/reimherr__likelihood__squared_mean.csv": "ff53bd6ebe9d232e57e8800d44b83456e8f8563e7089adcb379671326a33b8bc",
+        "metadata/reimherr__likelihood__squared_mean.json": "8a3a7954c480d53e2fb450c2321a1c10f6154dffe4395b6f4ff0f476cca2ec9f",
+        "figures/reimherr__likelihood__squared_mean.png": "ce6dd8095931855ac99552c7ddd179724acedba54109ef9b9c6698441271ca05"
+      }
+    },
+    {
+      "configuration": "wiesenfarth__bootstrap__posterior_mse",
+      "rows": 164,
+      "files": {
+        "tables/wiesenfarth__bootstrap__posterior_mse.csv": "d1faf59024045bb7e59650fdf0891a0c3016c9012d778a88503b2917d20e3ee9",
+        "metadata/wiesenfarth__bootstrap__posterior_mse.json": "48e9dd3043c176af6969797d91862f671eff79ac101bf01da74febd6495eb2dd",
+        "figures/wiesenfarth__bootstrap__posterior_mse.png": "738e4022e7a6a38f8fa232de37e4466a92e83f32524c13d0ffb2f12150812e2e"
+      }
+    },
+    {
+      "configuration": "wiesenfarth__bootstrap__squared_mean",
+      "rows": 164,
+      "files": {
+        "tables/wiesenfarth__bootstrap__squared_mean.csv": "d63fc475e7cda6890131bb1fb483b7f3666c8c50db6a6bc4abd0c91be0f80e90",
+        "metadata/wiesenfarth__bootstrap__squared_mean.json": "02f407228427bb16b1c9ba2120ba393baf4778309bd16755dfa0436e5ff26689",
+        "figures/wiesenfarth__bootstrap__squared_mean.png": "ea66d0a61c3e0c6d01989130f4bad1a99e781d4b994626550fc80e0d6dd3c52b"
+      }
+    },
+    {
+      "configuration": "wiesenfarth__likelihood__posterior_mse",
+      "rows": 164,
+      "files": {
+        "tables/wiesenfarth__likelihood__posterior_mse.csv": "f343156d4b06e7192e2b06e18bbedc5ad687c1bf422818be5b9c1dfa4c31152e",
+        "metadata/wiesenfarth__likelihood__posterior_mse.json": "e218f68f2640ed151e1fe2e1deca03864fec8916f9032d63db2daa8e24170c06",
+        "figures/wiesenfarth__likelihood__posterior_mse.png": "26a8df53588bb439813a04ce90d6739b4d4e9ebfe5eca0dda3994f997c0b8e62"
+      }
+    },
+    {
+      "configuration": "wiesenfarth",
+      "rows": 164,
+      "files": {
+        "tables/wiesenfarth.csv": "bba80361cd5d80fe82ba7c6198f748b9b206a074679c0ba0a5423bb115bccd86",
+        "metadata/wiesenfarth.json": "0172d39402658e5888e7c4b9d9887081710366c55bf1bd4358261b2fd630ebc8",
+        "figures/wiesenfarth.png": "4e76711eba5e00b2570e926dbc57ad92082702058116d84f66fb7ac4eeb6cb0b"
+      }
+    }
+  ]
+}

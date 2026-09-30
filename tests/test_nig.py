@@ -2,7 +2,7 @@ import numpy as np
 import pytest
 from scipy.stats import invgamma, t
 
-from nig import posterior_means, posterior_moments, posterior_parameters
+from model import posterior_means, posterior_moments, posterior_parameters
 
 
 Y = np.array([[1.64, 1.70, 1.72, 1.74, 1.82, 1.82, 1.82, 1.90, 2.08]])
