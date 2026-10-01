@@ -9,19 +9,45 @@ import shutil
 import pytest
 
 import cli
-from config import AnalysisConfig, all_configs
+from config import AnalysisConfig, all_configs, prior_locations
 from data import load_wing_lengths
+from plotting import plot_result
+from reporting import write_results
 from validation import validate_all, validate_result
 
 
 ROOT = Path(__file__).resolve().parents[1]
 
 
-@pytest.fixture
-def saved(tmp_path):
-    output = tmp_path / 'results'
-    shutil.copytree(ROOT / 'results', output)
+@pytest.fixture(scope='session')
+def valid_outputs(tmp_path_factory):
+    """Synthetic records for validator tests, never scientific analysis outputs.
+
+    Build once in pytest's temporary directory; do not depend on results/.
+    Posterior correctness and real-result regression are tested separately.
+    """
+    output = tmp_path_factory.mktemp('validation_fixture')
     y = load_wing_lengths(ROOT / 'data/raw/wing_lengths.csv')
+    for config in all_configs():
+        rows = []
+        for mu0 in prior_locations(y):
+            for target in config.targets:
+                row = dict(method=config.method, target=target, mu0=mu0,
+                           epss=0, fixed_risk=1., candidate_risk=1., boundary=0)
+                if config.method == 'reimherr' or config.sampling == 'bootstrap':
+                    row['bootstrap_rejections'] = 0
+                row['risk_reps'] = config.risk_reps
+                rows.append(row)
+        write_results(rows, y, config, output)
+        plot_result(output, y, config)
+    return output, y
+
+
+@pytest.fixture
+def saved(tmp_path, valid_outputs):
+    template, y = valid_outputs
+    output = tmp_path / 'results'
+    shutil.copytree(template, output)
     return output, y
 
 
